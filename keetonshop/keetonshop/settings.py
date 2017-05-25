@@ -111,7 +111,7 @@ WSGI_APPLICATION = 'keetonshop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': '/var/www/oscar/keetonshop/db.sqlite3',
     	'ATOMIC_REQUESTS': True,
     }
 }
@@ -169,7 +169,10 @@ STATICFILES_FINDERS = (
 )
 
 MEDIA_URL = '/media/'
+
+#MEDIA_ROOT = 'media'
 MEDIA_ROOT = location('keetonshop/media')
+
 THUMBNAIL_DEBUG = True
 THUMBNAIL_KEY_PREFIX = 'oscar-sandbox'
 
